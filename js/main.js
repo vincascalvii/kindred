@@ -38,12 +38,27 @@
 
 (function() {
 
-	// Pause all audio when this button is clicked
+	// Pause all sounds when this button is clicked
 	document.getElementById('pause-all').addEventListener('click', function() {
+
+		// First pause all the audio files
 		var audio = document.querySelectorAll('.audio-file');
 		for ( var i = 0; i < audio.length; i++ ) {
-			aduio[i].pause();
+			audio[i].pause();
 		}
+
+		// Then hide all the pause buttons
+		var pause = document.querySelectorAll('.audio-pause');
+		for ( var j = 0; j < audio.length; j++ ) {
+			pause[j].classList.remove('active');
+		}
+
+		// Then enable the icon so user can play again
+		var play = document.querySelectorAll('.audio-play');
+		for ( var k = 0; k < play.length; k++ ) {
+			play[k].classList.remove('disabled');
+		}
+
 	}, false);
 
 })();
