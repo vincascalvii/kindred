@@ -29,3 +29,21 @@
 	}
 
 })();
+
+/* ================================================================
+
+	SIDEBAR
+
+================================================================ */
+
+(function() {
+
+	// Pause all audio when this button is clicked
+	document.getElementById('pause-all').addEventListener('click', function() {
+		var audio = document.querySelectorAll('.audio-file');
+		for ( var i = 0; i < audio.length; i++ ) {
+			aduio[i].pause();
+		}
+	}, false);
+
+})();
