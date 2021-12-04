@@ -80,10 +80,18 @@
 
 	// Hide the volume setting if clicked outside
 	window.addEventListener('click', function(e) {
-		if ( !e.target.matches('.volume') ) {
-			document.querySelector('.volume-setting').classList.remove('active');
+		var volume = document.querySelector('.volume');
+		if ( e.target !== volume && !volume.contains(e.target) ) {
+			var setting = document.querySelector('.volume-setting');
+			if ( setting.classList.contains('active') ) {
+				setting.classList.remove('active');
+			}
 		}
 	}, false);
+
+	if (e.target !== element && !element.contains(e.target)) {
+    element.parentNode.removeChild(element);
+  }
 
 	// Adjust the volume of all audio files at once
 	document.querySelector('input[name="volume-control"]').addEventListener('change', function() {
