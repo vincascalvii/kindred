@@ -78,6 +78,32 @@
 		this.classList.toggle('active');
 	}, false);
 
+	// Polyfill for "matches" - IE9+
+	if ( !Element.prototype.matches ) {
+		Element.prototype.matches =
+			Element.prototype.msMatchesSelector ||
+			Element.prototype.webkitMatchesSelector;
+	}
+
+	// Polyfill for "closest" - IE9+
+	if ( !Element.prototype.closest ) {
+		Element.prototype.closest = function(s) {
+			var el = this;
+			do {
+				if ( Element.prototype.matches.call(el, s) ) return el;
+				el = el.parentElement || el.parentNode;
+			} while (el !== null && el.nodeType === 1);
+			return null;
+		};
+	}
+
+	// Hide the volume setting if clicked outside
+	window.addEventListener('click', function(e) {
+		if ( !e.target.id = 'volume-control' &&
+			 !e.target.closest('.volume-setting') ) {
+			document.querySelector('.volume-setting').classList.remove('active');
+		}
+	}, false);
 
 	// Adjust the volume of all audio files at once
 	document.querySelector('input[name="volume-control"]').addEventListener('change', function() {
@@ -87,5 +113,12 @@
 		}
 		document.querySelector('.volume-setting output').value = Math.round( this.value * 100 );
 	}, false);
+
+	// Hide the volume setting on mobile Safari because it will not work
+	var ua = window.navigator.userAgent;
+	var iOS = !!ua.match(/iP(ad|hone)/i);
+	var webkit = !!ua.match(/WebKit/i);
+	var iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
+	if ( iOSSafari ) document.querySelector('.volume').style.display = 'none';
 
 })();

@@ -95,6 +95,10 @@
 	border-top: 2px solid #ddd;
 }
 
+.footer .container {
+	padding-right: 90px;
+}
+
 .sidebar .icon {
 	cursor: pointer;
 }
