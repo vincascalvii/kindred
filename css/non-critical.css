@@ -22,16 +22,3 @@
 	justify-content: center;
 	align-items: center;
 }
-
-.footer {
-	border-top: 1px solid #ddd;
-}
-
-.footer p {
-	color: #727272;
-	font-style: italic;
-}
-
-.footer a {
-	text-decoration: underline;
-}
