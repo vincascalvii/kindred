@@ -31,6 +31,10 @@
 	border-top: 2px solid #ddd;
 }
 
+.sidebar .icon {
+	cursor: pointer;
+}
+
 .light-off {
 	filter: brightness(.2);
 }
