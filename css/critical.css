@@ -37,8 +37,7 @@ a {
 
 .header {
     position: relative;
-    padding-top: 15px;
-    border-top: 10px solid #af56c8;
+    padding-top: 20px;
 }
 
 .header .back {

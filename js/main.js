@@ -89,10 +89,6 @@
 		}
 	}, false);
 
-	if (e.target !== element && !element.contains(e.target)) {
-    element.parentNode.removeChild(element);
-  }
-
 	// Adjust the volume of all audio files at once
 	document.querySelector('input[name="volume-control"]').addEventListener('change', function() {
 		var audio = document.querySelectorAll('.audio-file');
