@@ -77,6 +77,6 @@ a {
 	z-index: 1;
 }
 
-.audio.pause.active {
+.audio-pause.active {
 	display: block;
 }
