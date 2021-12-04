@@ -52,6 +52,7 @@
     justify-content: center;
     align-items: center;
 	position: absolute;
+	top: 0;
 	right: 90px;
 	width: 200px;
     background-color: #ddd;
@@ -73,7 +74,7 @@
 }
 
 .volume-setting input::-webkit-slider-runnable-track {
-	background-color: #d7dbdd;
+	background-color: #fff;
 	height: 6px;
 	border: 1px solid transparent;
 	border-radius: 3px;
@@ -81,12 +82,12 @@
 
 .volume-setting input[disabled]::-webkit-slider-runnable-track {
 	background-color: transparent;
-	border: 1px solid #d7dbdd;
+	border: 1px solid #fff;
 	opacity: .4;
 }
 
 .volume-setting input::-moz-range-track {
-	background-color: #d7dbdd;
+	background-color: #fff;
 	height: 6px;
 	border: none;
 	border-radius: 3px;
@@ -100,12 +101,12 @@
 }
 
 .volume-setting input::-ms-fill-lower { 
-	background-color: #d7dbdd;
+	background-color: #fff;
 	border-radius: 3px;
 }
 
 .volume-setting input::-ms-fill-upper { 
-	background-color: #d7dbdd;
+	background-color: #fff;
 	border-radius: 3px;
 }
 
@@ -137,7 +138,7 @@
 
 .volume-setting input[disabled]::-webkit-slider-thumb {
 	background-color: transparent;
-	border: 1px solid #d7dbdd;
+	border: 1px solid #fff;
 }
 
 .volume-setting input:active::-webkit-slider-thumb {

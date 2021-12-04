@@ -85,7 +85,7 @@
 		for ( var i = 0; i < audio.length; i++ ) {
 			audio[i].volume = this.value;
 		}
-		document.querySelector('.volume-setting output').value = this.value;
+		document.querySelector('.volume-setting output').value = ( this.value * 100 );
 	}, false);
 
 })();
