@@ -1,3 +1,7 @@
+.audio-block {
+	cursor: pointer;
+}
+
 .audio-play.disabled {
 	pointer-events: none;
 }
@@ -32,7 +36,7 @@
 }
 
 .light-off.sidebar {
-	filter: brightness(.6);
+	filter: brightness(.4);
 }
 
 #light-toggle.active {
@@ -50,15 +54,131 @@
 	position: absolute;
 	right: 90px;
 	width: 200px;
-    background-color: #fff;
+    background-color: #ddd;
     padding: 10px 20px;
     border-radius: 30px;
 }
 
 .volume-setting input {
+	background: none;
 	width: 100%;
+	padding: 0;
+	border: none;
+	outline: none;
+	vertical-align: middle;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+		 -o-appearance: none;
+			appearance: none;
+}
+
+.volume-setting input::-webkit-slider-runnable-track {
+	background-color: #d7dbdd;
+	height: 6px;
+	border: 1px solid transparent;
+	border-radius: 3px;
+}
+
+.volume-setting input[disabled]::-webkit-slider-runnable-track {
+	background-color: transparent;
+	border: 1px solid #d7dbdd;
+	opacity: .4;
+}
+
+.volume-setting input::-moz-range-track {
+	background-color: #d7dbdd;
+	height: 6px;
+	border: none;
+	border-radius: 3px;
+}
+
+.volume-setting input::-ms-track {
+	background: none;
+	color: transparent;
+	height: 6px;
+	border: none;
+}
+
+.volume-setting input::-ms-fill-lower { 
+	background-color: #d7dbdd;
+	border-radius: 3px;
+}
+
+.volume-setting input::-ms-fill-upper { 
+	background-color: #d7dbdd;
+	border-radius: 3px;
+}
+
+.volume-setting input::-ms-tooltip { 
+	display: none;
+}
+
+.volume-setting input::-moz-range-thumb {
+	background: none;
+	background-color: #606670;
+	width: 18px;
+	height: 18px;
+	border: none;
+	border-radius: 20px;
+}
+
+.volume-setting input:active::-moz-range-thumb {
+ 	outline: none;
+}
+
+.volume-setting input::-webkit-slider-thumb {
+	background-color: #606670;
+	width: 18px;
+	height: 18px;
+	margin-top: -7px;
+	border-radius: 100%;
+	-webkit-appearance: none !important;
+}
+
+.volume-setting input[disabled]::-webkit-slider-thumb {
+	background-color: transparent;
+	border: 1px solid #d7dbdd;
+}
+
+.volume-setting input:active::-webkit-slider-thumb {
+	outline: none;
+}
+
+.volume-setting input::-ms-thumb { 
+	background-color: #606670;
+	width: 18px;
+	height: 18px;
+	border: none;
+	border-radius: 100%;
+}
+
+.volume-setting input:active::-ms-thumb {
+	border: none;
+}
+
+.volume-setting output {
+	color: #727272;
+	font-size: 1.4rem;
+	margin-left: 10px;
 }
 
 .volume-setting.active {
 	display: flex;
+}
+
+@media only screen and (min-width: 1366px) {
+
+	.audio-block {
+		background-color: #333;
+		transition: .2s ease-in-out;
+	}
+
+	.audio-block:hover {
+		background-color: #444;
+	}
+
+	.audio-block.active:hover {
+		background-color: #333;
+	}
+
 }

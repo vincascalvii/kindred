@@ -66,6 +66,7 @@
 	document.getElementById('light-toggle').addEventListener('click', function() {
 		document.querySelector('.header').classList.toggle('light-off');
 		document.querySelector('.main').classList.toggle('light-off');
+		document.querySelector('.footer').classList.toggle('light-off');
 		document.querySelector('.sidebar').classList.toggle('light-off');
 		this.classList.toggle('active');
 	}, false);
@@ -84,6 +85,7 @@
 		for ( var i = 0; i < audio.length; i++ ) {
 			audio[i].volume = this.value;
 		}
+		document.querySelector('.volume-setting output').value = this.value;
 	}, false);
 
 })();
