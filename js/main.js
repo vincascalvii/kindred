@@ -78,29 +78,9 @@
 		this.classList.toggle('active');
 	}, false);
 
-	// Polyfill for "matches" - IE9+
-	if ( !Element.prototype.matches ) {
-		Element.prototype.matches =
-			Element.prototype.msMatchesSelector ||
-			Element.prototype.webkitMatchesSelector;
-	}
-
-	// Polyfill for "closest" - IE9+
-	if ( !Element.prototype.closest ) {
-		Element.prototype.closest = function(s) {
-			var el = this;
-			do {
-				if ( Element.prototype.matches.call(el, s) ) return el;
-				el = el.parentElement || el.parentNode;
-			} while (el !== null && el.nodeType === 1);
-			return null;
-		};
-	}
-
 	// Hide the volume setting if clicked outside
 	window.addEventListener('click', function(e) {
-		if ( !e.target.id == 'volume-control' &&
-			 !e.target.closest('.volume-setting') ) {
+		if ( !e.target.matches('.volume') ) {
 			document.querySelector('.volume-setting').classList.remove('active');
 		}
 	}, false);
