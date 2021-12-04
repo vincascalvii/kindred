@@ -101,8 +101,8 @@ a {
 
 .sidebar {
 	position: fixed;
-    top: 60px;
-    right: 0;
+	right: 0;
+    bottom: 60px;
     width: 80px;
     padding: 20px;
     border: 2px solid #ddd;
