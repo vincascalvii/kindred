@@ -16,8 +16,8 @@ html {
 
 body {
 	font-family: "Poppins", Helvetica, Arial, sans-serif;
-	background-color: #fff;
-	color: #333;
+	background-color: #333;
+	color: #eee;
 	font-size: 1.6rem;
 	width: 100vw;
 	margin: 0;
@@ -25,6 +25,7 @@ body {
 }
 
 a {
+	color: #82c5ff;
 	text-decoration: none;
 }
 
@@ -34,18 +35,50 @@ a {
 	margin: 0 auto;
 }
 
+.header {
+    position: relative;
+    padding-top: 20px;
+}
+
+.header .back {
+    color: #ccc;
+}
+
+.header .back .icon {
+    font-size: 2.4rem;
+}
+
+.header .back .text {
+    display: none;
+}
+
+.header .title {
+    font-size: 2.4rem;
+    margin: 5px 0;
+}
+
+.header .sub-title {
+	color: #ccc;
+	font-size: 1.6rem;
+	margin: 0;
+}
+
 .main {
 	display: flex;
 	flex-wrap: wrap;
+	padding: 20px 80px 20px 20px;
+	margin-top: 20px;
 }
 
 .audio-block {
 	position: relative;
 	width: 100px;
 	height: 100px;
+	padding: 20px;
 	margin: 0 20px 20px 0;
 	overflow: hidden;
-	border-radius: 10px;
+	border: 2px solid #ddd;
+	border-radius: 50%;
 }
 
 .audio-play {
@@ -62,21 +95,16 @@ a {
 	height: 100%;
 }
 
-.audio-play.disabled {
-	pointer-events: none;
-}
-
 .audio-pause {
 	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,.4);
-	z-index: 1;
 }
 
-.audio-pause.active {
-	display: block;
+.aside {
+	position: fixed;
+    top: 60px;
+    right: 0;
+    width: 80px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 60px 0 0 60px;
 }

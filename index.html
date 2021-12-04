@@ -65,10 +65,22 @@
 
 <body>
 
-	<main class="main container">
+	<header class="header">
+		<div class="container">
+			<a href="/" class="back" aria-label="Return to home page">
+				<span class="icon">&#8592;</span>
+				<span class="text">Back</span>
+			</a>
+			<h1 class="title">Kindred</h1>
+			<h2 class="sub-title">Sound Application</h2>
+		</div>
+	</header>
 
+	<main class="main">
 		<div class="audio-block">
-			<div class="audio-pause"></div>
+			<div class="audio-pause">
+				<span class="icon">&#10074;&#10074;</span>
+			</div>
 			<div class="audio-play">
 				<img src="/kindred/img/thumbs/rain-1.jpg" alt="Rain 1 thumbnail">
 			</div>
@@ -78,9 +90,10 @@
 				Sorry, your browser does not support the audio element.
 			</audio>
 		</div>
-
 		<div class="audio-block">
-			<div class="audio-pause"></div>
+			<div class="audio-pause">
+				<span class="icon">&#10074;&#10074;</span>
+			</div>
 			<div class="audio-play">
 				<img src="/kindred/img/thumbs/rain-2.jpg" alt="Rain 2 thumbnail">
 			</div>
@@ -90,9 +103,10 @@
 				Sorry, your browser does not support the audio element.
 			</audio>
 		</div>
-
 		<div class="audio-block">
-			<div class="audio-pause"></div>
+			<div class="audio-pause">
+				<span class="icon">&#10074;&#10074;</span>
+			</div>
 			<div class="audio-play">
 				<img src="/kindred/img/thumbs/rain-3.jpg" alt="Rain 3 thumbnail">
 			</div>
@@ -102,11 +116,55 @@
 				Sorry, your browser does not support the audio element.
 			</audio>
 		</div>
-			
+		<div class="audio-block">
+			<div class="audio-pause">
+				<span class="icon">&#10074;&#10074;</span>
+			</div>
+			<div class="audio-play">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="icon">
+					<path fill="#ffd747" d="M56.916,21.6A1,1,0,0,0,56,21H31.8L41.889,1.459A1,1,0,0,0,41,0H25.645a1,1,0,0,0-.882.528l-17.645,33A1,1,0,0,0,8,35H28.5L17.076,62.617a1,1,0,0,0,1.657,1.063l38-41A1,1,0,0,0,56.916,21.6Z"></path>
+				</svg>
+			</div>
+			<audio class="audio-file" loop>
+				<source src="/kindred/audio/thunder-1.ogg" type="audio/ogg">
+				<source src="/kindred/audio/thunder-1.mp3" type="audio/mpeg">
+				Sorry, your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="audio-block">
+			<div class="audio-pause">
+				<span class="icon">&#10074;&#10074;</span>
+			</div>
+			<div class="audio-play">
+				<img src="/kindred/img/thumbs/bird-1.jpg" alt="Bird 1 thumbnail">
+			</div>
+			<audio class="audio-file" loop>
+				<source src="/kindred/audio/bird-1.ogg" type="audio/ogg">
+				<source src="/kindred/audio/bird-1.mp3" type="audio/mpeg">
+				Sorry, your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="audio-block">
+			<div class="audio-pause">
+				<span class="icon">&#10074;&#10074;</span>
+			</div>
+			<div class="audio-play">
+				<img src="/kindred/img/thumbs/jungle-1.jpg" alt="Jungle 1 thumbnail">
+			</div>
+			<audio class="audio-file" loop>
+				<source src="/kindred/audio/jungle-1.ogg" type="audio/ogg">
+				<source src="/kindred/audio/jungle-1.mp3" type="audio/mpeg">
+				Sorry, your browser does not support the audio element.
+			</audio>
+		</div>
 	</main>
 
-	<footer>
-		<p>I do not own any of the photos and audio files used on this page. If you would like to find the original source or author, please go to the <a href="/kindred/disclaimer" aria-label="Footer go to disclaimer">Disclaimer</a> page.</p>
+	<aside class="sidebar"></aside>
+
+	<footer class="footer">
+		<div class="container">
+			<p>I do not own any of the photos and audio files used on this page.<br>If you would like to find the original source or author, please visit the <a href="/kindred/disclaimer" aria-label="Footer go to disclaimer">Disclaimer</a> page.</p>
+		</div>
 	</footer>
 
 	<!-- LAZYSIZES / LAZY LOADING -->
