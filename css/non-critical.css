@@ -99,6 +99,10 @@
 	padding-right: 90px;
 }
 
+.footer .copyright {
+	font-size: 1.4rem;
+}
+
 .sidebar .icon {
 	cursor: pointer;
 }

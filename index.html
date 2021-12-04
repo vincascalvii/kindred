@@ -400,10 +400,15 @@
 
 	<footer class="footer">
 		<div class="container">
-			<p><strong>Usage</strong><br>Click on the icon to play the audio and re-click to pause.<br>The sidebar can help to darken the screen, pause all audio at once or control the volume.<br>(Volume control does not work on some mobile browsers)</p>
+			<p><strong>Usage</strong><br>Click on the icon to play the audio and re-click to pause.<br>The sidebar can help to darken the screen, pause all audio at once or control the volume.</p>
 			<p><strong>Disclaimer</strong><br>I do not own any of the audio files used on this page.</p>
+			<p class="copyright">Copyright &copy; <span id="copyright-year"></span> Calvin Lam</p>
 		</div>
 	</footer>
+
+	<script type="text/javascript">
+		document.getElementById('copyright-year').innerHTML = new Date().getFullYear();
+	</script>
 
 	<!-- LAZYSIZES / LAZY LOADING -->
 	<script src="/js/lazysizes/lazysizes.min.js"></script>
