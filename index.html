@@ -620,16 +620,19 @@
 	</main>
 
 	<aside class="sidebar">
-		<div id="light-toggle" class="icon">&#9728;</div>
+		<div id="light-toggle" class="icon">
+			<i class="fas fa-moon"></i>
+		</div>
 		<div style="position:relative">
-			<div id="volume-control" class="icon">&#128264;</div>
+			<div id="volume-control" class="icon">
+				<i class="fas fa-volume-up"></i>
+			</div>
 			<div class="volume-setting">
 				<input type="range" name="volume-control"
 					   min="0" max="1" step="0.01" 
 					   aria-label="Volume control">
 				<output>50</output>
 			</div>
-		</div>
 		</div>
 		<div id="pause-all" class="icon">&#10074;&#10074;</div>
 	</aside>
@@ -642,6 +645,11 @@
 
 	<!-- LAZYSIZES / LAZY LOADING -->
 	<script src="/js/lazysizes/lazysizes.min.js"></script>
+
+	<!-- FONT AWESOME -->
+	<script defer src="/js/fontawesome/brands.js"></script>
+	<script defer src="/js/fontawesome/solid.js"></script>
+	<script defer src="/js/fontawesome/fontawesome.js"></script>
 
 	<!-- CUSTOM -->
 	<script src="/kindred/js/main.js"></script>
