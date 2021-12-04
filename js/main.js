@@ -99,7 +99,7 @@
 
 	// Hide the volume setting if clicked outside
 	window.addEventListener('click', function(e) {
-		if ( !e.target.id = 'volume-control' &&
+		if ( !e.target.id == 'volume-control' &&
 			 !e.target.closest('.volume-setting') ) {
 			document.querySelector('.volume-setting').classList.remove('active');
 		}
