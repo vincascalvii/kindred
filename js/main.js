@@ -61,4 +61,29 @@
 
 	}, false);
 
+
+	// Toggle the brightness of the screen
+	document.getElementById('.light-toggle').addEventListener('click', function() {
+		document.querySelector('.header').classList.toggle('light-off');
+		document.querySelector('.main').classList.toggle('light-off');
+		document.querySelector('.sidebar').classList.toggle('light-off');
+		this.classList.toggle('active');
+	}, false);
+
+
+	// Show / hide the volume control
+	document.getElementById('.light-toggle').addEventListener('click', function() {
+		document.querySelector('.volume-setting').classList.toggle('active');
+		this.classList.toggle('active');
+	}, false);
+
+
+	// Adjust the volume of all audio files at once
+	document.querySelector('input[name="volume-control"]').addEventListener('change', function() {
+		var audio = document.querySelectorAll('.audio-file');
+		for ( var i = 0; i < audio.length; i++ ) {
+			audio[i].volume = this.value;
+		}
+	}, false);
+
 })();

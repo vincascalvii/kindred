@@ -620,8 +620,23 @@
 	</main>
 
 	<aside class="sidebar">
+		<div id="light-toggle" class="icon">&#9728;</div>
+		<div id="volume-control" class="icon">
+			&#128264;
+			<div class="volume-setting">
+				<input type="range" name="volume-control"
+					   min="0" max="1" step="0.01" 
+					   aria-label="Volume control">
+			</div>
+		</div>
 		<div id="pause-all" class="icon">&#10074;&#10074;</div>
 	</aside>
+
+	<footer class="footer">
+		<div class="container">
+			<p><strong>Disclaimer</strong><br>I do not own any of the icons or audio files used on this page.</p>
+		</div>
+	</footer>
 
 	<!-- LAZYSIZES / LAZY LOADING -->
 	<script src="/js/lazysizes/lazysizes.min.js"></script>
