@@ -123,6 +123,10 @@ a {
 	background-color: #ddd;
     color: #333;
 	font-size: 2rem;
-	margin-left: 10px;
+	margin: 0 0 15px 10px;
     border-radius: 50%;
+}
+
+.sidebar .icon:last-child {
+	margin-bottom: 0;
 }

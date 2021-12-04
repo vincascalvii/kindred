@@ -63,7 +63,7 @@
 
 
 	// Toggle the brightness of the screen
-	document.getElementById('.light-toggle').addEventListener('click', function() {
+	document.getElementById('light-toggle').addEventListener('click', function() {
 		document.querySelector('.header').classList.toggle('light-off');
 		document.querySelector('.main').classList.toggle('light-off');
 		document.querySelector('.sidebar').classList.toggle('light-off');
@@ -72,7 +72,7 @@
 
 
 	// Show / hide the volume control
-	document.getElementById('.light-toggle').addEventListener('click', function() {
+	document.getElementById('volume-control').addEventListener('click', function() {
 		document.querySelector('.volume-setting').classList.toggle('active');
 		this.classList.toggle('active');
 	}, false);
